@@ -342,6 +342,14 @@ Ask which platform they use or want to try, then walk them through:
 2. Authorize access to their data repo
 3. Codex clones the repo and can read `latest.json` and `history.json` directly
 
+**Optional: Enable calendar push**
+
+If the user wants their AI coach to write planned workouts directly to their Intervals.icu calendar, walk them through copying these files from the Section 11 repo into their data repo:
+- `examples/agentic/push.py` → repo root as `push.py`
+- `examples/agentic/push-workout.yml` → `.github/workflows/push-workout.yml`
+
+No new secrets needed — uses the same `ATHLETE_ID` and `INTERVALS_KEY` from Step 4. See `examples/agentic/README.md` for usage details and workout syntax.
+
 Agent platforms fetch data automatically, work with private repos, and some (like OpenClaw) support autonomous heartbeat checks — scheduled coaching observations without the user asking.
 
 ---
