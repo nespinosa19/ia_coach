@@ -1,5 +1,5 @@
 {
-  "scope": "Operational files that affect coaching quality. These are the files --update compares and pulls. --init downloads the entire repo as a zip and does not use this manifest for file discovery.",
+  "scope": "Operational files that affect coaching quality or sync infrastructure. These are the files --update compares and pulls. --init downloads the entire repo as a zip and does not use this manifest for file discovery.",
   "files": {
     "sync.py": {
       "version": "3.76",
@@ -10,6 +10,16 @@
       "version": "0.3",
       "path": "examples/agentic/push.py",
       "description": "Calendar write engine"
+    },
+    "auto-sync.yml": {
+      "version": "1.0",
+      "path": "examples/json-auto-sync/auto-sync.yml",
+      "description": "GitHub Actions workflow for automated sync"
+    },
+    "push-workout.yml": {
+      "version": "1.0",
+      "path": "examples/agentic/push-workout.yml",
+      "description": "GitHub Actions workflow for push.py dispatch"
     },
     "SECTION_11.md": {
       "version": "11.13",
