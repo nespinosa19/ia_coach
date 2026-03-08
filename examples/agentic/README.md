@@ -24,6 +24,8 @@ python push.py push --json week.json --confirm
 
 Read operations (`list`) have no safety gate — they never modify anything.
 
+**Scope:** All write operations (push, move, delete) operate on planned events only — future calendar items. Completed activities and training history cannot be modified or deleted through push.py.
+
 ## Setup
 
 ### Path 1: GitHub Actions dispatch (recommended)
