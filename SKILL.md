@@ -150,3 +150,12 @@ Section 11 does not implement GitHub authentication. It reads files from whateve
 - Running in an agent (OpenClaw, Claude Cowork, etc.) with GitHub access configured: can read/write repos that the agent's token/SSH key allows
 
 Access is entirely governed by credentials the user has already configured in their environment.
+
+# Tools & Execution
+L'agent utilise l'environnement virtuel et des chemins absolus depuis le répertoire de travail pour garantir l'accès aux credentials (.sync_config.json).
+
+- **sync**: `/home/nespinosa/.openclaw/workspace/.venv/bin/python3 /home/nespinosa/.openclaw/workspace/training-data/sync.py`
+- **push**: `cd /home/nespinosa/.openclaw/workspace/training-data && /home/nespinosa/.openclaw/workspace/.venv/bin/python3 push.py [ACTION] [ARGUMENTS]`
+
+## Actions valides pour push.py
+L'agent doit se référer aux fichiers situés dans `/home/nespinosa/.openclaw/workspace/skills/section-11/examples/agentic`
